@@ -9,6 +9,7 @@ import fr.insalyon.dasi.proactif.metier.OM.Employe;
 import fr.insalyon.dasi.proactif.metier.OM.Incident;
 import fr.insalyon.dasi.proactif.metier.OM.Intervention;
 import fr.insalyon.dasi.proactif.metier.OM.Livraison;
+import fr.insalyon.dasi.proactif.metier.OM.Personne;
 import fr.insalyon.dasi.proactif.metier.Service.ServiceUtile;
 import fr.insalyon.dasi.proactif.metier.Service.ServiceMetier;
 import java.text.SimpleDateFormat;
@@ -32,20 +33,28 @@ public class Main {
         
         
         JpaUtil.init();
-        boolean continuer=true;       
+        boolean continuer=true;
+//        String mail= "el.ben@gmail.com";
+//        String mdp= "bench";
+//        String mail2="cgangalic@gmail.com";
+//        String mdp2="12ga34ca";
+//        Personne p= ServiceMetier.chercherPersonneMailEtMdp(mail, mdp);
+//        Personne p2=ServiceMetier.chercherPersonneMailEtMdp(mail2, mdp2);
+
         
+
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date date = sdf.parse("07/09/1996");
-        Employe em = new Employe(7, 17, null, "Mr", "Gangalic", "Catalin", date,
-                "69100", "Villeurbanne", "1 Avenue Albert Einstein", "07833333", 
-                "cgangalic@gmail.com", "12ga34ca");
-        ServiceMetier.creerPersonne(em);
-        date = sdf.parse("06/06/1990");
-        em = new Employe(10, 20, null, "Mrs", "Duraffourg", "Maud", date,
-                "69100", "Villeurbanne", "20 Avenue Albert Einstein", "0787777", 
-                "mdouraffourg@gmail.com", "12du34ma");
-        ServiceMetier.creerPersonne(em);
-        
+//        Employe em = new Employe(7, 17, null, "Mr", "Gangalic", "Catalin", date,
+//                "69100", "Villeurbanne", "1 Avenue Albert Einstein", "07833333", 
+//                "cgangalic@gmail.com", "12ga34ca");
+//        ServiceMetier.creerPersonne(em);
+//        date = sdf.parse("06/06/1990");
+//        em = new Employe(10, 20, null, "Mrs", "Duraffourg", "Maud", date,
+//                "69100", "Villeurbanne", "20 Avenue Albert Einstein", "0787777", 
+//                "mdouraffourg@gmail.com", "12du34ma");
+//        ServiceMetier.creerPersonne(em);
+            
         
         while(continuer){
             System.out.println("\nBienvenue, que voulez vous faire ?");
@@ -217,7 +226,7 @@ public class Main {
                         Integer hFin = lireInteger("A quelle heure finit-il "
                                 + "le travail ? ");
 
-                        em = new Employe(hDeb, hFin, null, civilite, nom,
+                        Employe em = new Employe(hDeb, hFin, null, civilite, nom,
                                 prenom,  date, codePost, ville, rue, tel, mail, 
                                 mdp);
                         if (!ServiceMetier.creerPersonne(em)){
@@ -243,4 +252,5 @@ public class Main {
         }
         JpaUtil.destroy();
     }
+    
 }
