@@ -9,7 +9,6 @@ import fr.insalyon.dasi.proactif.metier.OM.Employe;
 import fr.insalyon.dasi.proactif.metier.OM.Incident;
 import fr.insalyon.dasi.proactif.metier.OM.Intervention;
 import fr.insalyon.dasi.proactif.metier.OM.Livraison;
-import fr.insalyon.dasi.proactif.metier.OM.Personne;
 import fr.insalyon.dasi.proactif.metier.Service.ServiceUtile;
 import fr.insalyon.dasi.proactif.metier.Service.ServiceMetier;
 import java.text.SimpleDateFormat;
@@ -55,7 +54,6 @@ public class Main {
 //                "mdouraffourg@gmail.com", "12du34ma");
 //        ServiceMetier.creerPersonne(em);
             
-        
         while(continuer){
             System.out.println("\nBienvenue, que voulez vous faire ?");
             System.out.println("1-creer un client");

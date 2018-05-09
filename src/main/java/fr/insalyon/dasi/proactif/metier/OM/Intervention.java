@@ -57,6 +57,10 @@ public class Intervention implements Serializable {
                 "\nDescription : "+ this.Description +
                 "\nHorodate : " + this.Horodate;
     }
+
+    public Integer getIdIntervention() {
+        return IdIntervention;
+    }
     
     public String getType(){
         return "";
